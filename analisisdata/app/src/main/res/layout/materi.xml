@@ -1,0 +1,765 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".materi">
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        tools:ignore="MissingConstraints">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            tools:layout_editor_absoluteX="0dp"
+            tools:layout_editor_absoluteY="16dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginTop="15dp"
+                    android:layout_marginRight="15dp"
+                    android:fontFamily="serif"
+                    android:justificationMode="inter_word"
+                    android:text="Pengantar Analisis Data"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginRight="15dp"
+                    android:fontFamily="serif"
+                    android:justificationMode="inter_word"
+                    android:text="
+Pernahkah kalian mengalami saat sedang mencari informasi menemukan
+bahwa informasinya bertebaran di beberapa, bahkan di banyak halaman web?
+Mungkin pada saat itu kalian melakukan pencarian dengan mesin pencari dan
+mendapatkan hasil berupa daftar halaman yang memuat informasi yang kalian
+cari. Contohnya misalnya kalian ingin membanding-bandingkan harga barang
+dari beberapa situs toko online. Kalian harus membuka halamannya satu per
+satu, kemudian membandingkan, dan memutuskan akan membeli barang
+sesuai dengan kriteria yang kalian tetapkan. Jika membuka semua halaman web
+tersebut harus dilakukan manual, akan sangat melelahkan dan membosankan
+bukan? Bayangkan jika ada robot yang dapat melakukannya untuk kalian,
+sehingga mudah untuk menganasis. Tentunya pengambilan keputusan akan
+menjadi lebih cepat. Robot itu tidak harus berwujud seperti manusia lho. Robot
+dapat berupa sebuah perangkat lunak komputer. Nah, pada unit ini kalian akan
+membuat sebuah robot seperti ini yang akan membantu kalian. \n
+Setelah lulus kuliah, apa yang kalian
+lakukan jika ingin mencari pekerjaan?
+Atau mungkin selama kuliah juga ingin
+mencari pekerjaan sambilan (part time)?
+Untuk mencari lowongan pekerjaan, kita
+menggunakan koran atau pun halaman
+web, misalnya JobsID. Coba ketik https://
+www.jobs.id/ di browser. Di halaman ini,
+kalian dapat mencari pekerjaan dengan
+memasukkan kata kunci pekerjaan
+di form pencarian yang ada, misalnya
+pekerjaan sambilan atau “part time”,
+seperti diperlihatkan pada Gambar 6.2." />
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="150dp"
+                    android:layout_marginLeft="0dp"
+                    android:src="@drawable/materi_1" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginRight="15dp"
+                    android:fontFamily="serif"
+                    android:justificationMode="inter_word"
+                    android:text="Gambar 6.2 Contoh Tampilan Halaman Website
+Pencarian Kerja /n
+Sumber: Dokumen Kemendikbud, 2021"
+                    android:textAlignment="center"
+                    android:textSize="10sp" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginRight="15dp"
+                    android:fontFamily="serif"
+                    android:justificationMode="inter_word"
+                    android:text="Dari halaman tersebut kita peroleh daftar pekerjaan yang ditampilkan cukup
+detail dalam beberapa halaman. Dengan tampilan tersebut, kita perlu melakukan
+scroll sekitar delapan kali untuk mendapatkan sekitar 23 lowongan pekerjaan.
+Bagaimana caranya kita dapat merangkum lowongan pekerjaan tersebut sehingga
+lebih mudah untuk melihat dan memilih pekerjaan yang kita inginkan? \n
+Dalam kajian analisis data, terdapat teknik yang disebut sebagai scraping.
+Scraping adalah salah satu bentuk penyalinan, di mana data tertentu dikumpulkan
+dan disalin dari sebuah halaman web, bisa ke dalam basis data, spreadsheet atau
+tampilan tertentu untuk pengambilan atau analisis data. Scraping bisa dilakukan
+dengan menggunakan sebuah bahasa pemrograman yang mendukung. Dengan
+scraping, kita bisa mendapatkan rangkuman dari suatu halaman web sehingga
+23 lowongan yang sebelumnya ditampilkan dalam beberapa scroll kini menjadi
+diringkas dalam satu tampilan dengan data penting yang kita inginkan saja.
+Dalam aktivitas di unit pembelajaran ini, kita akan melakukan scraping dengan
+membuat program yang mengambil data dari sebuah halaman website. \n
+Untuk membangun sebuah scraper, kita perlu menentukan bahasa
+pemrograman yang memudahkan kita. Setiap bahasa pemrograman akan
+diimplementasi oleh sebuah lingkungan pengembangan terintegrasi (Integrated
+Development Environment/IDE) tertentu. Ada banyak pilihan bahasa pemrograman
+beserta IDE-nya. Disini kita akan menggunakan bahasa pemrograman Python.
+Bahasa Python dipilih karena menjadi bahasa yang sering digunakan dalam
+analisis data. Python memiliki banyak sekali fungsi dan library (pustaka) yang
+memudahkan kita untuk melakukan analisis data, salah satunya untuk melakukan
+scraping ini. \n
+Kemudian untuk membuat program Python, kita memerlukan alat bantu
+IDE atau lingkungan kerja untuk menulis dan menjalankan program Python
+tersebut. Salah satu alat bantu yang bisa kita gunakan ini yaitu Google Collaboratory
+atau Google Colab. Google Colab dipilih karena dapat digunakan secara online
+untuk mengambil data dari website yang online pula. Selain itu, banyak fungsi dan
+pustaka Python yang sudah terpasang dalam Google Colab sehingga bisa langsung
+digunakan. \n
+Kita akan mulai dengan pengenalan alat bantu Google Colab dan Python.
+Setelah cukup mengenal dua alat bantu analisis data ini, mulailah kita membuat
+proyek untuk scraping halaman website yang dipilih. Kemudian setelah itu, data
+hasil scraping ini divisualisasikan ke dalam berbagai bentuk diagram dan chart." />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginRight="15dp"
+                    android:fontFamily="serif"
+                    android:justificationMode="inter_word"
+                    android:text="A. Pengenalan Perkakas Analisis Data \n
+1. Google Colaboratory (Google Colab) \n
+Aktivitas AD-K10-01-P: Mengenal Google Colab"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginRight="15dp"
+                    android:fontFamily="serif"
+                    android:justificationMode="inter_word"
+                    android:text="Aktivitas ini dilakukan untuk memulai mengenal alat/lingkungan
+analisis data, salah satunya ialah Google Colab. Google Colab atau Google
+Colaboratory adalah salah satu lingkungan pengembangan aplikasi
+terintegrasi yang disediakan oleh Google secara online (Online IDE). Karena
+sifatnya yang online, maka pengguna tidak perlu melakukan instalasi dan
+dapat langsung menggunakan Google Colab untuk menulis program dan
+melakukan pengolahan data dari Internet. Selain itu, Google Colab juga
+memiliki banyak fungsi serta library yang dapat digunakan untuk membantu
+pengolahan data, termasuk untuk melakukan scraping. \n
+Sebelum membuat program, berikut beberapa langkah mengenal
+penggunaan Google Colab. \n
+1. Buka Google Colaboratory melalui link https://colab.research.google.
+com/ Jika diminta untuk Sign-In, silakan masuk dengan menggunakan
+akun Google/GMail. \n
+2. Buat catatan baru melalui pilihan NEW NOTEBOOK seperti diperlihatkan
+pada Gambar 6.3. Notebook adalah penamaan untuk file kerja di dalam
+Google Colab, tempat membuat berbagai macam dokumen, termasuk
+teks dokumen/catatan dan teks kode program Python." />
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="150dp"
+                    android:layout_marginLeft="0dp"
+                    android:src="@drawable/materi_2" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginRight="15dp"
+                    android:fontFamily="serif"
+                    android:justificationMode="inter_word"
+                    android:text="Gambar 6.3 Tampilan Google Colab Saat Dibuka Pertama Kali \n
+Sumber: Dokumen Kemendikbud, 2021"
+                    android:textAlignment="center"
+                    android:textSize="10sp" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginRight="15dp"
+                    android:fontFamily="serif"
+                    android:justificationMode="inter_word"
+                    android:text="Perhatikan bahwa Google Colab memiliki beberapa bagian area kerja
+yang hampir serupa dengan berbagai IDE yang lain. Beberapa objek yang
+ada di Google Colab diperlihatkan pada Gambar 6.3, yaitu seperti berikut. \n
+a. Nama Notebook, yang merupakan nama file berekstensi ipynb (Ipython
+Notebook). Kita bisa mengganti nama notebook dengan mengklik
+nama notebook tersebut. \n
+b. Star, yang menandakan tingkat kepentingan file ini. \n
+c. Header Kanan, yang berisi pilihan komentar, pilihan untuk berbagi
+(share), pengaturan (setting) file, serta pengaturan akun. \n
+d. Menubar, yang berisi pilihan menu seperti File, Edit, View dan lain
+sebagainya. \n
+e. Panel Kiri, yang berisi beberapa ikon menu seperti Daftar Isi, Pencarian,
+Penyisipan Kode, Pengelolaan File, dan Pemilihan Perintah. \n
+f. Toolbar Atas, yang berisi pilihan ikon untuk Penambahan Kode atau
+Teks, Pilihan Koneksi, dan Pilihan Menutup Menubar. \n
+g. Konten Notebook, yang berisi tulisan kode program atau teks yang
+kita tulis. \n
+h. Cell Toolbar, yang berisi pilihan ikon untuk mengatur sel pada konten
+Pemindahan Atas atau bawah, Koneksi Antarsel, Penambahan
+komentar, Pengaturan Editor, Penggandaan, Penghapusan Sel dan
+lain sebagainya." />
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="150dp"
+                    android:layout_marginLeft="0dp"
+                    android:src="@drawable/materi_3" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginRight="15dp"
+                    android:fontFamily="serif"
+                    android:justificationMode="inter_word"
+                    android:text="Gambar 6.4 Area Kerja Google Colab \n
+Sumber: Dokumen Kemendikbud, 2021"
+                    android:textAlignment="center"
+                    android:textSize="10sp" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginRight="15dp"
+                    android:fontFamily="serif"
+                    android:justificationMode="inter_word"
+                    android:text="3. Mulailah untuk membuat kode program Python dengan mencetak sebuah
+teks seperti contoh pada Gambar 6.5. Ketik satu baris kode tersebut di
+area Konten Notebook." />
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="150dp"
+                    android:layout_marginLeft="0dp"
+                    android:src="@drawable/materi_4" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginRight="15dp"
+                    android:fontFamily="serif"
+                    android:justificationMode="inter_word"
+                    android:text="Gambar 6.5 Contoh sederhana kode program Python \n
+Sumber: Dokumen Kemendikbud, 2021"
+                    android:textAlignment="center"
+                    android:textSize="10sp" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginRight="15dp"
+                    android:fontFamily="serif"
+                    android:justificationMode="inter_word"
+                    android:text="4. Untuk menguji hasil dari kode program tersebut, tekan tombol “Run cell”
+(bulat dan segitiga) yang ada di pojok kiri area Konten Notebook. Jika
+berhasil, layar output akan menghasilkan teks sesuai yang diharapkan di
+bawah Konten Notebook seperti pada Gambar 6.6. Setelah berhasil, kita
+siap untuk membuat program Python menggunakan Google Colab ini." />
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="150dp"
+                    android:layout_marginLeft="0dp"
+                    android:src="@drawable/materi_5" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginRight="15dp"
+                    android:fontFamily="serif"
+                    android:justificationMode="inter_word"
+                    android:text="Gambar 6.6 Hasil Keluaran Contoh Sederhana Kode Program Python \n
+Sumber: Dokumen Kemendikbud, 2021"
+                    android:textAlignment="center"
+                    android:textSize="10sp" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginRight="15dp"
+                    android:fontFamily="serif"
+                    android:justificationMode="inter_word"
+                    android:text="2. Phyton \n
+Bahasa Pemrograman Python \n
+Aktivitas AD-K10-02-P: Mengenal Python"
+                    android:textStyle="bold" />
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginRight="15dp"
+                    android:fontFamily="serif"
+                    android:justificationMode="inter_word"
+                    android:text="Aktivitas pemanasan ini dilakukan untuk memulai mengenal sebuah bahasa
+pemrograman yang menyediakan library untuk analisis data, yaitu Python. \n
+Untuk membantu berkomunikasi dengan komputer, kita perlu sebuah
+bahasa yang dipahami baik oleh manusia maupun komputer, dalam hal ini
+bahasa Pemrograman. Secara umum, bahasa pemrograman adalah bahasa
+yang digunakan untuk membuat program yang akan memberikan perintah
+kepada komputer untuk melakukan sesuatu. Ada berbagai jenis bahasa
+pemrograman yang dapat digunakan untuk membuat program. Salah satu
+bahasa pemrograman yang sering digunakan untuk melakukan analisis
+data karena menyediakan library untuk berbagai tahap proses analisis data,
+ialah bahasa Python. Python merupakan bahasa pemrograman yang cukup
+populer, seperti halnya bahasa C yang digunakan dalam unit pembelajaran
+Algoritma dan Pemrograman. Pada bagian ini, akan dibahas beberapa dasar
+pemrograman Python, terutama yang terkait dengan analisis data. Perhatikan
+bahwa pemrograman di materi analisis data ini hanya digunakan sebagai alat
+bantu. Algoritma dan pemrograman juga akan sedikit disinggung dalam unit
+pembelajaran ini sebagai bentuk latihan dan eksplorasi, memahami eksekusi
+yang terjadi khususnya dalam setiap proses analisis data. Jadi, kalian tidak
+perlu terlalu bingung memikirkan aturan bahasa pemrograman Python yang
+diberikan." />
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginRight="15dp"
+                    android:fontFamily="serif"
+                    android:justificationMode="inter_word"
+                    android:text="a. Cetak Data (print)"
+                    android:textStyle="bold" />
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginRight="15dp"
+                    android:fontFamily="serif"
+                    android:justificationMode="inter_word"
+                    android:text="Perintah yang paling sederhana dalam bahasa pemrograman ialah perintah
+untuk mencetak suatu nilai atau data (output). Seperti halnya pada Gambar
+6.6 yang sudah disajikan sebelumnya, mencetak data dalam Python dapat
+dilakukan dengan menggunakan perintah print. Kalian dapat mengubah
+parameter atau isi di dalam tanda kurung print dengan data yang lain,
+misalnya menggantinya dengan “Selamat Datang”. Setelah kode program
+dieksekusi atau dengan menekan tombol Run, program akan menampilkan
+data seperti yang diharapkan." />
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginRight="15dp"
+                    android:fontFamily="serif"
+                    android:justificationMode="inter_word"
+                    android:text="Latihan 1"
+                    android:textStyle="bold" />
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginRight="15dp"
+                    android:fontFamily="serif"
+                    android:justificationMode="inter_word"
+                    android:text="1. Gantilah data dalam print dengan print(“2 + 3”), kemudian
+jalankan (Run). Apa hasilnya? \n
+2. Kemudian, ganti kembali data dalam print dengan print(2 + 3).
+Apa hasilnya? \n
+3. Ganti kembali data dalam print dengan print(“2” + “3”). Apa
+hasilnya? \n
+4. Apa makna dari penggunaan tanda petik tersebut? \n
+Tanda petik digunakan untuk mencetak data string, yang berupa nilai
+alfanumerik dan tanda baca, yang tidak memiliki nilai aritmatika. Artinya,
+string “2” ditambah (atau lebih tepatnya dijejerkan) dengan string “3”,
+hasilnya string “23”. Tidak masuk akal string “2” dikurangi atau dikalikan
+string “3”, sedangkan jika bilangan 2 dikurangi atau dikalikan 3, pasti ada
+nilai bilangannya. Sampai di sini, apakah kalian paham? Silakan, diskusikan
+dengan teman dan guru kalian. \n
+Pemrograman Python di sini serupa dengan pemrograman C di unit
+pembelajaran Algoritma Pemrograman. Di program-program selanjutnya,
+kalian akan belajar Python dengan pendekatan prosedural seperti halnya
+belajar C. Untuk melihat hubungannya, kalian bisa melihat kembali tabel
+perbandingan bahasa Python dan bahasa C di unit pembelajaran Algoritma
+Pemrograman." />
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginRight="15dp"
+                    android:fontFamily="serif"
+                    android:justificationMode="inter_word"
+                    android:text="b. Pemberian Nilai Data (Assignment)"
+                    android:textStyle="bold" />
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginRight="15dp"
+                    android:fontFamily="serif"
+                    android:justificationMode="inter_word"
+                    android:text="Selain mencetak langsung dari data yang ada di dalam tanda kurung, data lain
+yang pengisiannya di luar tanda kurung juga dapat dicetak. Pengisian atau
+pemberian nilai data ini disebut assignment. Assignment dilakukan dengan
+menyediakan sebuah nama (variabel) yang kemudian diisi dengan suatu
+nilai data menggunakan tanda sama dengan (“=”). Perhatikan baris perintah
+pertama pada Gambar 6.7. Dalam baris tersebut, variabel bil1 diisi dengan
+nilai 10. Sebelum ke baris keempat, perhatikan catatan berikut." />
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="150dp"
+                    android:layout_marginLeft="0dp"
+                    android:src="@drawable/materi_6" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginRight="15dp"
+                    android:fontFamily="serif"
+                    android:justificationMode="inter_word"
+                    android:text="Gambar 6.7 Contoh Assignment dalam Operasi Penjumlahan Sederhana \n
+Sumber: Dokumen Kemendikbud, 2021"
+                    android:textAlignment="center"
+                    android:textSize="10sp" />
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginRight="15dp"
+                    android:fontFamily="serif"
+                    android:justificationMode="inter_word"
+                    android:text="Latihan 2"
+                    android:textStyle="bold" />
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginRight="15dp"
+                    android:fontFamily="serif"
+                    android:justificationMode="inter_word"
+                    android:text="1. Jika diperhatikan, ada berapa nama variabel yang digunakan dalam
+Gambar 6.6? \n
+2. Apa makna dari baris ke-2 dan ke-3 dalam Gambar 6.6? \n
+Setelah dilakukan penjumlahan dan data nilai hasilnya disimpan ke dalam
+variabel jumlah, data ini kemudian dicetak pada baris 4. Kita dapat melihat
+hasil cetak atau keluaran (output) dari variabel jumlah setelah program ditulis
+lengkap kemudian di-Run. Perhatikan bahwa mencetak dapat dilakukan cukup
+dengan menuliskan nama variabel yang akan dicetak tanpa menggunakan
+perintah print, khususnya jika berada di baris terakhir kode program." />
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginRight="15dp"
+                    android:fontFamily="serif"
+                    android:justificationMode="inter_word"
+                    android:text="c. Banyak Nilai untuk Satu Variabel (Array)"
+                    android:textStyle="bold" />
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginRight="15dp"
+                    android:fontFamily="serif"
+                    android:justificationMode="inter_word"
+                    android:text="Perhatikan bahwa pada variabel bil1, bil2, dan jumlah, kita
+menyimpan data dengan satu nilai saja untuk setiap variabel. Jika kita
+mengisi kembali variabel dengan nilai yang lain, nilai yang lama akan hilang
+atau ditimpa dengan nilai baru. Namun demikian, kita masih bisa menyimpan
+lebih dari satu nilai dalam satu variabel saja, yang disebut variabel array.
+Dalam kehidupan sehari-hari, kita akan menemui data yang memiliki
+banyak nilai, termasuk daftar nilai mata pelajaran Informatika sebuah kelas,
+misalnya. Menuliskan sebuah array dapat dilakukan dengan menggunakan
+tanda kurung siku seperti diperlihatkan pada Gambar 6.8 baris pertama." />
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="150dp"
+                    android:layout_marginLeft="0dp"
+                    android:src="@drawable/materi_7" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginRight="15dp"
+                    android:fontFamily="serif"
+                    android:justificationMode="inter_word"
+                    android:text="Gambar 6.8 Hasil Keluaran Contoh Sederhana Kode Program Python \n
+Sumber: Dokumen Kemendikbud, 2021"
+                    android:textAlignment="center"
+                    android:textSize="10sp" />
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginRight="15dp"
+                    android:fontFamily="serif"
+                    android:justificationMode="inter_word"
+                    android:text="Karena satu variabel menyimpan banyak nilai, kita dapat menyebutkan nilainilai
+tersebut sebagai nilai pertama (atau elemen indeks pertama), elemen kedua,
+elemen ketiga, dan seterusnya. Dalam bahasa pemrograman, mengakses nilai ke-n
+dari suatu array dapat dilakukan dengan menggunakan kurung siku persis setelah
+nama variabel array tersebut, misalnya pada baris kedua Gambar 6.8." />
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginRight="15dp"
+                    android:fontFamily="serif"
+                    android:justificationMode="inter_word"
+                    android:text="latihan 3"
+                    android:textStyle="bold" />
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginRight="15dp"
+                    android:fontFamily="serif"
+                    android:justificationMode="inter_word"
+                    android:text="1. Ketikkan baris perintah pertama dan kedua saja pada kode program
+Gambar 6.7 (tanpa kode baris ketiga dan seterusnya), kemudian
+jalankan programnya. Apakah output-nya bilangan 9? \n
+2. Padahal, kita ingin mencetak data ke-1 pada baris kedua tersebut.
+Mengapa tidak muncul bilangan 10? \n
+Indeks array dalam bahasa Python atau di hampir semua bahasa
+pemrograman dimulai dengan perhitungan nol, disebut indeks ke-0. Bilangan
+9 seperti yang tercetak dari Gambar 6.7 ialah elemen dengan indeks ke-1 atau
+indeks pertama." />
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginRight="15dp"
+                    android:fontFamily="serif"
+                    android:justificationMode="inter_word"
+                    android:text="d. Penelusuran Data/Pengulangan (Loop: for)"
+                    android:textStyle="bold" />
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginRight="15dp"
+                    android:fontFamily="serif"
+                    android:justificationMode="inter_word"
+                    android:text="Perhatikan bahwa dalam Gambar 6.8 baris pertama, kita hanya mencetak satu
+elemen sebuah data array pada indeks pertama. Pada baris ketiga dan kelima,
+kita mencetak banyak elemen, tetapi sebagai satu data utuh. Bagaimana jika
+kita ingin mencetak array sebagai elemen-elemen terpisah? Misalnya, kita ingin
+mencetak setiap elemen dengan memberikan keterangan indeksnya. Kita dapat
+menggunakan konsep Perulangan atau Loop dengan menggunakan perintah for,
+seperti ditunjukkan Gambar 6.9. Perintah for digunakan dengan menyertakan
+sebuah variabel baru untuk menelusuri setiap elemen di dalam variabel yang
+diberikan (setelah perintah in). Perhatikan baris ketiga Gambar 6.9." />
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="150dp"
+                    android:layout_marginLeft="0dp"
+                    android:src="@drawable/materi_8" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginRight="15dp"
+                    android:fontFamily="serif"
+                    android:justificationMode="inter_word"
+                    android:text="Gambar 6.9 Contoh Penggunaan for dalam Python \n
+Sumber: Dokumen Kemendikbud, 2021"
+                    android:textAlignment="center"
+                    android:textSize="10sp" />
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginRight="15dp"
+                    android:fontFamily="serif"
+                    android:justificationMode="inter_word"
+                    android:text="Karena for merupakan perintah blok (mengandung beberapa perintah lain),
+perlu diakhiri dengan tanda titik dua. Perintah-perintah yang dimaksudkan
+untuk ikut berulang mengikuti for ini dibuat menjorok ke kanan misalnya 1 tab.
+Perhatikan penulisan baris keempat dan kelima Gambar 6.9." />
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginRight="15dp"
+                    android:fontFamily="serif"
+                    android:justificationMode="inter_word"
+                    android:text="e. Uji Kondisi (Branch: try)"
+                    android:textStyle="bold" />
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginRight="15dp"
+                    android:fontFamily="serif"
+                    android:justificationMode="inter_word"
+                    android:text="Perhatikan bahwa kode program pada Gambar 6.9, array diisi dengan satu jenis
+data, yaitu data bilangan. Namun demikian, sebuah array bisa diisi dengan data
+yang bervariasi, misal data bilangan dan data tekstual (karakter dengan tanda
+petik). Namun, bagaimana pengolahan data yang bervariasi seperti ini?" />
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="150dp"
+                    android:layout_marginLeft="0dp"
+                    android:src="@drawable/materi_9" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginRight="15dp"
+                    android:fontFamily="serif"
+                    android:justificationMode="inter_word"
+                    android:text="Gambar 6.10 Contoh Pengolahan Data yang Bervariasi \n
+Sumber: Dokumen Kemendikbud, 2021"
+                    android:textAlignment="center"
+                    android:textSize="10sp" />
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginRight="15dp"
+                    android:fontFamily="serif"
+                    android:justificationMode="inter_word"
+                    android:text="Perhatikan bahwa data yang dicetak dengan dibagi dua terlebih dahulu
+ini memiliki variasi data seperti data bilangan dan data tekstual. Padahal,
+pembagian hanya bisa dilakukan pada bilangan dan oleh bilangan. Maka, akan
+terjadi kesalahan jika pembagian dilakukan pada data bilangan dan data tekstual.
+Perhatikan pesan kesalahannya berbunyi “Line 3. Unsupported operand types for
+/”, yang dibagi harus berupa bilangan dengan bilangan, bukan string/teks. \n
+Lalu, bagaimana jika kondisi data yang akan diolah bervariasi seperti di atas?
+Ada kalanya, user atau pengguna program memasukkan data yang benar. Namun
+ada kalanya, mereka melakukan kesalahan saat memasukkan data. Oleh karena
+itu, program yang dibuat harus memiliki mekanisme untuk menangani variasi
+data tersebut. Bagaimana penanganannya? Misalnya, jika data yang ada berupa
+bilangan, data langsung dibagi. Namun, jika data tidak bisa dibagi, berikan pesan
+bahwa data bukan merupakan angka/bilangan. Penanganan ini dalam konsep
+pemrograman disebut konsep percabangan atau branch. Salah satu perintah
+dalam Python yang dapat digunakan dalam percabangan ialah pasangan perintah
+try dan except seperti diperlihatkan pada Gambar 6.11." />
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="150dp"
+                    android:layout_marginLeft="0dp"
+                    android:src="@drawable/materi_10" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginRight="15dp"
+                    android:fontFamily="serif"
+                    android:justificationMode="inter_word"
+                    android:text="Gambar 6.11 Contoh Penggunaan try-except dalam Python \n
+Sumber: Dokumen Kemendikbud, 2021"
+                    android:textAlignment="center"
+                    android:textSize="10sp" />
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginRight="15dp"
+                    android:fontFamily="serif"
+                    android:justificationMode="inter_word"
+                    android:text="Secara umum, penggunaan blok try-except dapat dijelaskan dengan
+terjemahannya. Kita mencoba (trying) untuk mengeksekusi perintah-perintah
+(baris setelah try). Jika terjadi kesalahan, eksekusi akan dilempar/lompat ke
+baris except dan mengeksekusi baris di dalamnya. Jika tidak terjadi kesalahan
+hingga akhir perintah dalam try, akan keluar dari blok perintah try-except
+(dalam hal ini kembali ke perintah for untuk perulangan berikutnya). Dari
+mekanisme ini, muncul proses percabangan di mana ada pemrosesan data yang
+membagi bilangan dan mencetak hasil pembagiannya, dan ada pemrosesan
+data yang tidak mencetak bilangan, tetapi mencetak pesan “Bukan bilangan”. \n
+Blok perintah try-except merupakan salah satu perintah yang digunakan
+untuk kasus percabangan untuk menguji suatu kondisi, dalam hal ini kasus
+kesalahan atau tidak. Ada perintah lain yang dapat digunakan untuk menangani
+kasus percabangan (branch), seperti perintah if dan blok perintah if-else." />
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginRight="15dp"
+                    android:fontFamily="serif"
+                    android:justificationMode="inter_word"
+                    android:text="f. Pustaka Kode (Library import)"
+                    android:textStyle="bold" />
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginRight="15dp"
+                    android:fontFamily="serif"
+                    android:justificationMode="inter_word"
+                    android:text="Saat memerlukan informasi yang mungkin belum pernah dipelajari dan
+tidak ditemukan di buku mata pelajaran yang kalian miliki, kalian akan
+pergi ke perpustakaan yang menyimpan banyak sekali buku dan informasi
+yang dapat kita cari. Seperti halnya perpustakaan sekolah, fitur library atau
+pustaka di sebuah pemrograman memungkinkan kita untuk mendapatkan
+fungsionalitas yang tidak ada di program kita. Fungsionalitas ini disediakan
+oleh penyedia bahasa pemrograman atau komunitas tertentu yang memang
+sering menggunakan fungsionalitas tersebut. Library atau pustaka adalah
+koleksi program dan paket yang tersedia untuk berbagai penggunaan.
+122 Informatika SMA Kelas X
+Sebagai contoh, terdapat library Pandas. Kalian dapat mencoba untuk
+mengetikkan kode program seperti pada Gambar 6.12 sehingga menampilkan
+keluaran seperti pada Gambar 6.13. Perhatikan bahwa sebelum library Pandas
+digunakan di Baris 6 (pandas.DataFrame), kita perlu import terlebih dahulu
+library tersebut di Baris 1. Library Pandas ini dapat kalian pelajari lebih detil
+dari halaman webnya di https://pandas.pydata.org/." />
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="150dp"
+                    android:layout_marginLeft="0dp"
+                    android:src="@drawable/materi_11" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginRight="15dp"
+                    android:fontFamily="serif"
+                    android:justificationMode="inter_word"
+                    android:text="Gambar 6.12 Contoh sederhana penggunaan import pustaka Pandas \n
+Sumber: Dokumen Kemendikbud, 2021"
+                    android:textAlignment="center"
+                    android:textSize="10sp" />
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="150dp"
+                    android:layout_marginLeft="0dp"
+                    android:src="@drawable/materi_12" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginRight="15dp"
+                    android:fontFamily="serif"
+                    android:justificationMode="inter_word"
+                    android:text="Gambar 6.13 Hasil keluaran contoh sederhana penggunaan import pustaka Pandas \n
+Sumber: Dokumen Kemendikbud, 2021"
+                    android:textAlignment="center"
+                    android:textSize="10sp" />
+            </LinearLayout>
+        </RelativeLayout>
+    </ScrollView>
+</androidx.constraintlayout.widget.ConstraintLayout>
